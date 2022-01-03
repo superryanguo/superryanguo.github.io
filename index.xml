@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ryan guo website</title>
-    <link>http://superryanguo.github.io/</link>
-    <description>Recent content on ryan guo website</description>
+    <title>ryan guo&#39;s blog</title>
+    <link>https://superryanguo.github.io/</link>
+    <description>Recent content on ryan guo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>the first blog第一篇</title>
+      <link>https://superryanguo.github.io/</link>
+      <pubDate>Fri, 31 Dec 2021 17:18:29 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/</guid>
+      <description>2022元旦假期 充实 干了这几件事&amp;mdash;&amp;mdash;&amp;gt; 强撸了一个博客网站（开源化功大法好，不要问为什么，问就是本大圣玩技术就这么随心所欲👌） as you can see here 翻越了一座山头（感谢科技，没有让我迷路🙇） 打了几通嘴炮（对群里热点事情点评💬） 给麒麟变色杯开了光（酒具亦重要，平添多</description>
+    </item>
+    
   </channel>
 </rss>

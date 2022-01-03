@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on ryan guo website</title>
-    <link>http://superryanguo.github.io/tags/</link>
-    <description>Recent content in Tags on ryan guo website</description>
+    <title>Tags on ryan guo&#39;s blog</title>
+    <link>https://superryanguo.github.io/tags/</link>
+    <description>Recent content in Tags on ryan guo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://superryanguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language><atom:link href="https://superryanguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
