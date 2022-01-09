@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on superryanguo&#39;s home web</title>
+    <link>https://superryanguo.github.io/post/</link>
+    <description>Recent content in Posts on superryanguo&#39;s home web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 09 Jan 2022 16:54:19 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Submodule 使用指南</title>
+      <link>https://superryanguo.github.io/2022/01/09/git-submodule.html</link>
+      <pubDate>Sun, 09 Jan 2022 16:54:19 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/2022/01/09/git-submodule.html</guid>
+      <description>how to use git submodule git的子模块使用，似乎值得说一说 不少使用了git很久的人，对这一块也不算太熟，实际上子模块的使用是个重要的技能 add git submodule 通过在 git submodule add 命令后面加上想要跟踪的项目的相对或绝对 URL 来添加新的子模块 比如git submodule add https://github.com/chacon</description>
+    </item>
+    
+    <item>
+      <title>the first blog第一篇</title>
+      <link>https://superryanguo.github.io/post/2022-01-01-my-first-blog/</link>
+      <pubDate>Fri, 31 Dec 2021 17:18:29 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/post/2022-01-01-my-first-blog/</guid>
+      <description>2022元旦假期 充实 干了这几件事&amp;mdash;&amp;mdash;&amp;gt; 强撸了一个博客网站（开源化功大法好，不要问为什么，问就是本大圣玩技术就这么随心所欲👌） as you can see here 翻越了一座山头（感谢科技，没有让我迷路🙇） 打了几通嘴炮（对群里热点事情点评💬） 给麒麟变色杯开了光</description>
+    </item>
+    
+  </channel>
+</rss>

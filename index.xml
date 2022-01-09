@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ryan guo&#39;s blog</title>
+    <title>superryanguo&#39;s home web</title>
     <link>https://superryanguo.github.io/</link>
-    <description>Recent content on ryan guo&#39;s blog</description>
+    <description>Recent content on superryanguo&#39;s home web</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 09 Jan 2022 16:54:19 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Submodule 使用指南</title>
+      <link>https://superryanguo.github.io/2022/01/09/git-submodule.html</link>
+      <pubDate>Sun, 09 Jan 2022 16:54:19 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/2022/01/09/git-submodule.html</guid>
+      <description>how to use git submodule git的子模块使用，似乎值得说一说 不少使用了git很久的人，对这一块也不算太熟，实际上子模块的使用是个重要的技能 add git submodule 通过在 git submodule add 命令后面加上想要跟踪的项目的相对或绝对 URL 来添加新的子模块 比如git submodule add https://github.com/chacon</description>
+    </item>
+    
+    <item>
+      <title>2022 1 9 Think</title>
+      <link>https://superryanguo.github.io/thinks/2022-1-9-think/</link>
+      <pubDate>Sun, 09 Jan 2022 12:51:31 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/thinks/2022-1-9-think/</guid>
+      <description>这是一个最好的时代，也是一个最坏的时代； 这是一个智慧的年代，这是一个愚蠢的年代； 这是一个信任的时期，这是一个怀疑的时期； 这是一个光明的季节，这是一个黑暗的季节； 这是希望之春，这是失望之冬； 人们面前应有尽有，人们面前一无所有； 人们正踏上天堂之路，人们正走向地狱之</description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>https://superryanguo.github.io/about/</link>
+      <pubDate>Sat, 08 Jan 2022 09:13:37 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/about/</guid>
+      <description>在某大型跨国通信巨头公司任Scrum Master和Area Guardian，负责带团队和技术管理工作。 扫码关注</description>
+    </item>
+    
     <item>
       <title>the first blog第一篇</title>
-      <link>https://superryanguo.github.io/</link>
+      <link>https://superryanguo.github.io/post/2022-01-01-my-first-blog/</link>
       <pubDate>Fri, 31 Dec 2021 17:18:29 +0800</pubDate>
       
-      <guid>https://superryanguo.github.io/</guid>
-      <description>2022元旦假期 充实 干了这几件事&amp;mdash;&amp;mdash;&amp;gt; 强撸了一个博客网站（开源化功大法好，不要问为什么，问就是本大圣玩技术就这么随心所欲👌） as you can see here 翻越了一座山头（感谢科技，没有让我迷路🙇） 打了几通嘴炮（对群里热点事情点评💬） 给麒麟变色杯开了光（酒具亦重要，平添多</description>
+      <guid>https://superryanguo.github.io/post/2022-01-01-my-first-blog/</guid>
+      <description>2022元旦假期 充实 干了这几件事&amp;mdash;&amp;mdash;&amp;gt; 强撸了一个博客网站（开源化功大法好，不要问为什么，问就是本大圣玩技术就这么随心所欲👌） as you can see here 翻越了一座山头（感谢科技，没有让我迷路🙇） 打了几通嘴炮（对群里热点事情点评💬） 给麒麟变色杯开了光</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://superryanguo.github.io/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://superryanguo.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>https://superryanguo.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://superryanguo.github.io/search/</guid>
+      <description></description>
     </item>
     
   </channel>
