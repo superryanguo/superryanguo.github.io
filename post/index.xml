@@ -6,14 +6,23 @@
     <description>Recent content in Posts on superryanguo&#39;s home web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Jan 2022 16:43:55 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jan 2022 09:53:24 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>陈氏太极拳新论</title>
+      <link>https://superryanguo.github.io/post/2022-01-19-%E9%99%88%E6%B0%8F%E5%A4%AA%E6%9E%81%E6%8B%B3%E6%96%B0%E8%AE%BA/</link>
+      <pubDate>Wed, 19 Jan 2022 09:53:24 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/post/2022-01-19-%E9%99%88%E6%B0%8F%E5%A4%AA%E6%9E%81%E6%8B%B3%E6%96%B0%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>2022-01-15 MicroServicePatternBookRead</title>
       <link>https://superryanguo.github.io/post/2022-01-15-microservicepatternbookread/</link>
       <pubDate>Sat, 15 Jan 2022 16:43:55 +0800</pubDate>
       
       <guid>https://superryanguo.github.io/post/2022-01-15-microservicepatternbookread/</guid>
-      <description>@2022-01-15 立个flag，把书读完，写点读书笔记！</description>
+      <description>@20220122 第一章 逃离单体地狱 问题：Food To Go（FTGO）是家全美领先的在线餐饮快递企业。最近这家公司的CTO玛丽比较抓狂，原因是项目的关键节点总是要delay。FTGO使用的是单体模型（Order， Delivery， Restaurant， Kitchen， Accou</description>
     </item>
     
     <item>

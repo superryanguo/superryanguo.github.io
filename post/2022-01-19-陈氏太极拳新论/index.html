@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Git Submodule 使用指南 | superryanguo&#39;s home web</title>
-    <meta property="og:title" content="Git Submodule 使用指南 - superryanguo&#39;s home web">
+    <title>陈氏太极拳新论 | superryanguo&#39;s home web</title>
+    <meta property="og:title" content="陈氏太极拳新论 - superryanguo&#39;s home web">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2022-01-09T16:54:19&#43;08:00'>
+    <meta property="article:published_time" content='2022-01-19T09:53:24&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2022-01-09T16:54:19&#43;08:00'>
+    <meta property="article:modified_time" content='2022-01-19T09:53:24&#43;08:00'>
         
     <meta name="Keywords" content="golang,go语言,go语言笔记,superryanguo,micro-service, raspberry, rasp, rasp-pi, linux, AI, machine learning, 软件架构">
-    <meta name="description" content="Git Submodule 使用指南">
+    <meta name="description" content="陈氏太极拳新论">
         
     <meta name="author" content="superryanguo">
-    <meta property="og:url" content="https://superryanguo.github.io/2022/01/09/git-submodule.html">
+    <meta property="og:url" content="https://superryanguo.github.io/post/2022-01-19-%E9%99%88%E6%B0%8F%E5%A4%AA%E6%9E%81%E6%8B%B3%E6%96%B0%E8%AE%BA/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -165,19 +165,7 @@ var _hmt = _hmt || [];
 <div class="post-toc" style="position: absolute; top: 188px;">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#how-to-use-git-submodule">how to use git submodule</a>
-      <ul>
-        <li><a href="#add-git-submodule">add git submodule</a></li>
-        <li><a href="#init-git-submodule">init git submodule</a></li>
-        <li><a href="#operate-git-submodule">operate git submodule</a></li>
-        <li><a href="#how-to-update-a-existing-submodule">how to update a existing submodule</a></li>
-        <li><a href="#some-useful-commands">some useful commands</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+        <nav id="TableOfContents"></nav>
     </div>
 </div>
 <script type="text/javascript">
@@ -209,16 +197,16 @@ var _hmt = _hmt || [];
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">Git Submodule 使用指南</h1>
+            <h1 class="post-title">陈氏太极拳新论</h1>
         </header>
         <date class="post-meta meta-date">
-            2022年1月9日
+            2022年1月19日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='/categories/git'>git</a></span>
+            <span class="meta-category"><a href='/categories/taichi'>Taichi</a></span>
             
         </div>
         
@@ -236,40 +224,7 @@ var _hmt = _hmt || [];
         </div>
         
         <div class="post-content">
-            <h2 id="how-to-use-git-submodule">how to use git submodule</h2>
-<p>git的子模块使用，似乎值得说一说
-不少使用了git很久的人，对这一块也不算太熟，实际上子模块的使用是个重要的技能</p>
-<h3 id="add-git-submodule">add git submodule</h3>
-<p>通过在 git submodule add 命令后面加上想要跟踪的项目的相对或绝对 URL 来添加新的子模块
-比如git submodule add <a href="https://github.com/chaconinc/MyConnector">https://github.com/chaconinc/MyConnector</a>， 将会出现文件 .gitmodules
-git diff  &ndash;submodule可以对比子模块的改动
-注意 增加的子目录MyConnector 记录的 160000 模式。 这是 Git 中的一种特殊模式，
-它本质上意味着你是将一次提交记作一项目录记录的，而非将它记录成一个子目录或者一个文件。</p>
-<h3 id="init-git-submodule">init git submodule</h3>
-<p>MyConnector 目录，是空的。 你必须运行两个命令：git submodule init 用来初始化本地配置文件，
-而 git submodule update 则从该项目中抓取所有数据并检出父项目中列出的合适的提交。
-git clone 命令传递 &ndash;recurse-submodules 选项，它就会自动初始化并更新仓库中的每一个子模块，
-包括可能存在的嵌套子模块。</p>
-<p>git clone &ndash;recurse-submodules =git submodule init + update
-git submodule update &ndash;init = git submodule init + update
-git submodule update &ndash;init &ndash;recursive（嵌套）</p>
-<h3 id="operate-git-submodule">operate git submodule</h3>
-<p>如果你不想在子目录中手动抓取与合并，那么还有种更容易的方式。
-运行 git submodule update &ndash;remote，Git 将会进入子模块然后抓取并更新。
-获取子模块更新 git fetch + git merge = git pull</p>
-<h3 id="how-to-update-a-existing-submodule">how to update a existing submodule</h3>
-<ol>
-<li>vim the .gitmodules to update to the new url</li>
-<li>git submodule sync</li>
-<li>git submodule update &ndash;init &ndash;recursive &ndash;remote</li>
-<li>git add and push to remote</li>
-</ol>
-<h3 id="some-useful-commands">some useful commands</h3>
-<p>git push &ndash;recurse-submodules=on-demand 根据需要同时推送子模块的改动</p>
-<p>git submodule update &ndash;remote &ndash;merge</p>
-<p>git submodule foreach &lsquo;git stash&rsquo;</p>
-<p>参考 <a href="https://git-scm.com/book">GitScmBook</a></p>
-
+            
         </div>
 
         
@@ -281,15 +236,15 @@ git submodule update &ndash;init &ndash;recursive（嵌套）</p>
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/thinks/2022-1-9-think/">2022-01-09 Think</a></li>
+        <li><a href="/thinks/2022-01-15-positiveeachonewords/">2022-01-15 PositiveEachOneWords</a></li>
         
-        <li><a href="/about/">关于我</a></li>
+        <li><a href="/post/2022-01-15-microservicepatternbookread/">2022-01-15 MicroServicePatternBookRead</a></li>
         
-        <li><a href="/post/2022-01-01-my-first-blog/">the first blog第一篇</a></li>
+        <li><a href="/post/2022-01-15-huaweidatadaobookread/">2022-01-15 HuaWeiDataDaoBookRead</a></li>
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/post/2022-01-14-mandalorianthisistheway/">2022-01-14 ThisIsTheWay</a></li>
         
-        <li><a href="/search/">搜索</a></li>
+        <li><a href="/2022/01/09/git-submodule.html">Git Submodule 使用指南</a></li>
         
     </ul>
 </div>
@@ -299,7 +254,7 @@ git submodule update &ndash;init &ndash;recursive（嵌套）</p>
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/git'>git</a></li>
+                <li><a href='/tags/taichi'>Taichi</a></li>
                 
             </ul>
             
