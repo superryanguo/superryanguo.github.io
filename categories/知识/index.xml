@@ -6,7 +6,16 @@
     <description>Recent content in 知识 on superryanguo&#39;s home web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Jan 2022 16:43:55 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/categories/%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Feb 2022 11:40:09 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/categories/%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sudo的命令路径</title>
+      <link>https://superryanguo.github.io/post/sudo%E7%9A%84%E5%91%BD%E4%BB%A4%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Fri, 11 Feb 2022 11:40:09 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/post/sudo%E7%9A%84%E5%91%BD%E4%BB%A4%E8%B7%AF%E5%BE%84/</guid>
+      <description>问题： 用linux的sudo命令跑程序的时候，有时候会发现这类错误，比如运行sudo go $ sudo go [sudo] password for ryan: sudo: go: command not found 原因： 我们使用 sudo 时，使用的配置文件是 /etc/sudoers，默认路径是这些： ... Defaults secure_path=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin&amp;quot; ... 解决方法： 直接编辑(sudo vim)文件/etc/sudoers</description>
+    </item>
+    
     <item>
       <title>2022-01-15 MicroServicePatternBookRead</title>
       <link>https://superryanguo.github.io/post/2022-01-15-microservicepatternbookread/</link>

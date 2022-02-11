@@ -6,14 +6,32 @@
     <description>Recent content on superryanguo&#39;s home web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 19 Jan 2022 09:53:24 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Feb 2022 11:40:09 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sudo的命令路径</title>
+      <link>https://superryanguo.github.io/post/sudo%E7%9A%84%E5%91%BD%E4%BB%A4%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Fri, 11 Feb 2022 11:40:09 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/post/sudo%E7%9A%84%E5%91%BD%E4%BB%A4%E8%B7%AF%E5%BE%84/</guid>
+      <description>问题： 用linux的sudo命令跑程序的时候，有时候会发现这类错误，比如运行sudo go $ sudo go [sudo] password for ryan: sudo: go: command not found 原因： 我们使用 sudo 时，使用的配置文件是 /etc/sudoers，默认路径是这些： ... Defaults secure_path=&amp;quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin&amp;quot; ... 解决方法： 直接编辑(sudo vim)文件/etc/sudoers</description>
+    </item>
+    
+    <item>
+      <title>2022-01-31 关于卷王的想法</title>
+      <link>https://superryanguo.github.io/thinks/2022-01-31-%E5%85%B3%E4%BA%8E%E5%8D%B7%E7%8E%8B%E7%9A%84%E6%83%B3%E6%B3%95/</link>
+      <pubDate>Mon, 31 Jan 2022 17:16:23 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/thinks/2022-01-31-%E5%85%B3%E4%BA%8E%E5%8D%B7%E7%8E%8B%E7%9A%84%E6%83%B3%E6%B3%95/</guid>
+      <description>关于卷王的想法 在微信群聊天的时候，被人揶揄说太卷 在我看来，卷是一个人刻苦卖力的表现 不卷不是中国人 有一定程度上的道理， 资源机会匮乏，想出人头地必须更刻苦一点 先天条件（家庭条件）不足，必须后天（刻苦努力）来补 所以 卷王是个积极的称呼，学习的榜样，达尔文的进化论在人类</description>
+    </item>
+    
     <item>
       <title>陈氏太极拳新论</title>
       <link>https://superryanguo.github.io/post/2022-01-19-%E9%99%88%E6%B0%8F%E5%A4%AA%E6%9E%81%E6%8B%B3%E6%96%B0%E8%AE%BA/</link>
       <pubDate>Wed, 19 Jan 2022 09:53:24 +0800</pubDate>
       
       <guid>https://superryanguo.github.io/post/2022-01-19-%E9%99%88%E6%B0%8F%E5%A4%AA%E6%9E%81%E6%8B%B3%E6%96%B0%E8%AE%BA/</guid>
-      <description></description>
+      <description>“太极者，无极而生，动静之机，阴阳之母也。”这句话以及概述了太极的本质，来自于拳论。 古人前辈对太极拳的论述已经不少，现在想作为一个现代人，一个练太极拳十余年的太极拳爱好者，聊聊对太极拳的想法。 太极拳的发源 可以考证的是来自于河南温县陈家沟，创始人是陈王廷，后来陈</description>
     </item>
     
     <item>
