@@ -250,9 +250,13 @@ git diff  &ndash;submodule可以对比子模块的改动
 而 git submodule update 则从该项目中抓取所有数据并检出父项目中列出的合适的提交。
 git clone 命令传递 &ndash;recurse-submodules 选项，它就会自动初始化并更新仓库中的每一个子模块，
 包括可能存在的嵌套子模块。</p>
-<p>git clone &ndash;recurse-submodules =git submodule init + update
-git submodule update &ndash;init = git submodule init + update
-git submodule update &ndash;init &ndash;recursive（嵌套）</p>
+<ul>
+<li>git clone &ndash;recurse-submodules =git submodule init + update</li>
+<li>git submodule update &ndash;init = git submodule init + update</li>
+<li>git submodule update &ndash;init &ndash;recursive（嵌套）</li>
+</ul>
+<p>由于网速和墙的原因，有些时候运行之后只有一个.git目录,
+这时候不用急，直接跑到submodule里面git pull之后git reset —hard HEAD</p>
 <h3 id="operate-git-submodule">operate git submodule</h3>
 <p>如果你不想在子目录中手动抓取与合并，那么还有种更容易的方式。
 运行 git submodule update &ndash;remote，Git 将会进入子模块然后抓取并更新。
