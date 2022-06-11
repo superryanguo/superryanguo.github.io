@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on superryanguo&#39;s home web</title>
+    <link>https://superryanguo.github.io/categories/linux/</link>
+    <description>Recent content in linux on superryanguo&#39;s home web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Jun 2022 21:01:03 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用一条命令行更改文件夹所有文件名</title>
+      <link>https://superryanguo.github.io/post/%E7%94%A8%E4%B8%80%E6%9D%A1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E5%90%8D/</link>
+      <pubDate>Sat, 11 Jun 2022 21:01:03 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/post/%E7%94%A8%E4%B8%80%E6%9D%A1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E5%90%8D/</guid>
+      <description>很久没更新，忙着机器学习 是你学习机器学习，还是机器学习你 年中了，不扯了，干货来 &amp;ndash;&amp;gt; 问题：有时候一个文件夹下面很多相同模式名称的文件，如何迅速高效的重新命名它们？！ 思考：bash脚本，再整个循环for i in 啥的，搞个do &amp;hellip;. done之类，似乎有点复杂，awk强大，似乎</description>
+    </item>
+    
+  </channel>
+</rss>
