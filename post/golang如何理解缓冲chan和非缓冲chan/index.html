@@ -9,21 +9,24 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>随想 | superryanguo&#39;s home web</title>
-    <meta property="og:title" content="随想 - superryanguo&#39;s home web">
+    <title>Golang如何理解缓冲chan和非缓冲chan | superryanguo&#39;s home web</title>
+    <meta property="og:title" content="Golang如何理解缓冲chan和非缓冲chan - superryanguo&#39;s home web">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2023-07-08T17:22:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2023-07-08T17:22:00&#43;08:00'>
         
     <meta name="Keywords" content="golang,go语言,go语言笔记,superryanguo,micro-service, raspberry, rasp, rasp-pi, linux, AI, machine learning, 软件架构">
-    <meta name="description" content="随想">
+    <meta name="description" content="Golang如何理解缓冲chan和非缓冲chan">
         
     <meta name="author" content="superryanguo">
-    <meta property="og:url" content="https://superryanguo.github.io/tags/%E9%9A%8F%E6%83%B3/">
+    <meta property="og:url" content="https://superryanguo.github.io/post/golang%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%BC%93%E5%86%B2chan%E5%92%8C%E9%9D%9E%E7%BC%93%E5%86%B2chan/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="https://superryanguo.github.io/tags/%E9%9A%8F%E6%83%B3/index.xml" title="superryanguo's home web" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -77,7 +80,7 @@ var _hmt = _hmt || [];
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://superryanguo.github.io">首页</a>
+                    <a class="current" href="https://superryanguo.github.io">首页</a>
                     
                     <a  href="https://superryanguo.github.io/thinks/" title="随想">随想</a>
                     
@@ -98,90 +101,219 @@ var _hmt = _hmt || [];
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    
-    <h3 class="archive-title">
-        包含标签
-        <span class="keyword">随想</span>
-        的文章
-    </h3>
-    
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
-    
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#golang的缓存chan和非缓存chan的区别">Golang的缓存chan和非缓存chan的区别</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://superryanguo.github.io/thinks/2022-01-31-%E5%85%B3%E4%BA%8E%E5%8D%B7%E7%8E%8B%E7%9A%84%E6%83%B3%E6%B3%95/">2022-01-31 关于卷王的想法</a>
-            </h1>
+            <h1 class="post-title">Golang如何理解缓冲chan和非缓冲chan</h1>
         </header>
         <date class="post-meta meta-date">
-            2022年1月31日
+            2023年7月8日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='/categories/%E9%9A%8F%E6%83%B3'>随想</a>
+            <span class="meta-category"><a href='/categories/golang'>golang</a></span>
             
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
         </div>
         
         <div class="post-content">
-            关于卷王的想法 在微信群聊天的时候，被人揶揄说太卷 在我看来，卷是一个人刻苦卖力的表现 不卷不是中国人 有一定程度上的道理， 资源机会匮乏，想出人头地必须更刻苦一点 先天条件（家庭条件）不足，必须后天（刻苦努力）来补 所以 卷王是个积极的称呼，学习的榜样，达尔文的进化论在人类……
-            <p class="readmore"><a href="https://superryanguo.github.io/thinks/2022-01-31-%E5%85%B3%E4%BA%8E%E5%8D%B7%E7%8E%8B%E7%9A%84%E6%83%B3%E6%B3%95/">阅读全文</a></p>
+            <h2 id="golang的缓存chan和非缓存chan的区别">Golang的缓存chan和非缓存chan的区别</h2>
+<p>在使用golang的时候，可能都有这样的疑惑：带缓冲区但长度是1的channel和非缓冲channel有什么区别？比如下面的c1和c2</p>
+<pre tabindex="0"><code>c1 := make(chan int, 1)
+c2 := make(chan int)
+</code></pre><p>以此，也可以扩充到，缓冲channel和非缓冲channel的区别，咱们还是先看看golang的官方文档的经典解释：</p>
+<pre tabindex="0"><code>&quot;If the channel is unbuffered, the sender blocks until the receiver has received the value. If the channel has a buffer, the sender blocks only until the value has been copied to the buffer; if the buffer is full, this means waiting until some receiver has retrieved a value.&quot;
+</code></pre><p>似乎有点费解，咱们先看段程序之后再回过头来理解这句话，着急的可以直接跳到文章尾部看结论：-）</p>
+<p>示例代码:</p>
+<pre tabindex="0"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+        bc := make(chan string, 1)
+        nbc := make(chan string)
+        bc &lt;- &quot;buffer-channel&quot;
+        fmt.Println(&lt;-bc)
+
+        //nbc &lt;- &quot;non-buffer-channel&quot;
+        //fmt.Println(&lt;-nbc)
+        var s string
+        go func() {
+                s = &lt;-nbc
+        }()
+        nbc &lt;- &quot;non-buffer-channel&quot;
+
+        fmt.Println(s)
+}
+
+</code></pre><p>有兴趣的可以跑一下上面的程序，包括试一下被注释掉的那两行。
+简单来说, buffer channel，你只需要把数据copy到buffer里面你就可以返回（不阻塞）， 除非你的数据超过了缓存区长度(有可能另一边取的不够快)，导致无法写入才会阻塞<br>
+而对于non-buffer channel, 从上面注释掉的两行可以看看结果。
+如果没有另外一个go rountine去取，你是写不进去的，所以开始就会阻塞，即：除非接受方收到／拿走数据，否则就会阻塞。</p>
+<p>现在再去看开头的两句话，是不是更容易理解了？！</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/git-stash%E5%A6%82%E4%BD%95%E6%8C%87%E5%AE%9A%E6%9F%90%E4%B8%AA%E6%96%87%E4%BB%B6%E7%BC%93%E5%AD%98/">Git Stash如何指定某个文件缓存</a></li>
+        
+        <li><a href="/post/%E7%9B%9B%E5%A4%8F%E7%9A%84%E4%B8%80%E5%A4%A9/">盛夏的一天</a></li>
+        
+        <li><a href="/post/%E7%94%A8%E4%B8%80%E6%9D%A1%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E5%90%8D/">用一条命令行更改文件夹所有文件名</a></li>
+        
+        <li><a href="/post/%E4%BB%8E%E5%8C%96%E5%8D%81%E7%99%BB%E4%B9%8B%E6%94%80%E7%99%BB%E4%B8%89%E8%A7%92%E9%AB%BB/">从化十登之攀登三角髻</a></li>
+        
+        <li><a href="/post/git-branch/">Git Branch</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/golang'>golang</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://superryanguo.github.io/thinks/2022-01-15-positiveeachonewords/">2022-01-15 PositiveEachOneWords</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2022年1月15日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='/categories/%E9%9A%8F%E6%83%B3'>随想</a>
-            
-        </div>
-        
-        <div class="post-content">
-            @2022-01-15 除掉睡眠，人的一辈子只有一万多天。人与人的不同在于:你是真的活了一万多天，还是仅仅生活了一天，却重复了一万多次。&ndash;费尔南多. 佩索阿 @2022-01-22 悲观的人，先被自己打败，然后才被生活打败；乐观的人，先战胜自己，然后才战胜生活。 ——汪国真 对泛滥的资讯要保持警惕:……
-            <p class="readmore"><a href="https://superryanguo.github.io/thinks/2022-01-15-positiveeachonewords/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://superryanguo.github.io/thinks/2022-1-9-think/">2022-01-09 Think</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2022年1月9日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='/categories/%E9%9A%8F%E6%83%B3'>随想</a>
-            
-        </div>
-        
-        <div class="post-content">
-            这是一个最好的时代，也是一个最坏的时代； 这是一个智慧的年代，这是一个愚蠢的年代； 这是一个信任的时期，这是一个怀疑的时期； 这是一个光明的季节，这是一个黑暗的季节； 这是希望之春，这是失望之冬； 人们面前应有尽有，人们面前一无所有； 人们正踏上天堂之路，人们正走向地狱之……
-            <p class="readmore"><a href="https://superryanguo.github.io/thinks/2022-1-9-think/">阅读全文</a></p>
-        </div>
-    </article>
+ <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            visitor: true,
+            appId: 'bOXz0n5N6uwMDkVT4bRrxQM4-gzGzoHsz',
+            appKey: 'q0lf0dquJ5bpQKGLxDYXw4Hg'
+        })
+    </script>
+
+
     
 
     
-
-
-
-
+    
 
 </div>
 
@@ -208,6 +340,16 @@ var _hmt = _hmt || [];
 </footer>
 
 
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>

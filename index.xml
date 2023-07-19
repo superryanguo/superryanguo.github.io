@@ -6,7 +6,16 @@
     <description>Recent content on superryanguo&#39;s home web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 07 Jul 2023 19:12:21 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jul 2023 17:22:00 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang如何理解缓冲chan和非缓冲chan</title>
+      <link>https://superryanguo.github.io/post/golang%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%BC%93%E5%86%B2chan%E5%92%8C%E9%9D%9E%E7%BC%93%E5%86%B2chan/</link>
+      <pubDate>Sat, 08 Jul 2023 17:22:00 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/post/golang%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%BC%93%E5%86%B2chan%E5%92%8C%E9%9D%9E%E7%BC%93%E5%86%B2chan/</guid>
+      <description>Golang的缓存chan和非缓存chan的区别 在使用golang的时候，可能都有这样的疑惑：带缓冲区但长度是1的channel和非缓冲channel有什么区别？比如下面的c1和c2 c1 := make(chan int, 1) c2 := make(chan int) 以此，也可以扩充到，缓冲channel和非缓冲channel</description>
+    </item>
+    
     <item>
       <title>Git Stash如何指定某个文件缓存</title>
       <link>https://superryanguo.github.io/post/git-stash%E5%A6%82%E4%BD%95%E6%8C%87%E5%AE%9A%E6%9F%90%E4%B8%AA%E6%96%87%E4%BB%B6%E7%BC%93%E5%AD%98/</link>
