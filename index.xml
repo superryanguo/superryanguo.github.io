@@ -13,7 +13,7 @@
       <pubDate>Fri, 07 Jul 2023 19:12:21 +0800</pubDate>
       
       <guid>https://superryanguo.github.io/post/git-stash%E5%A6%82%E4%BD%95%E6%8C%87%E5%AE%9A%E6%9F%90%E4%B8%AA%E6%96%87%E4%BB%B6%E7%BC%93%E5%AD%98/</guid>
-      <description>&amp;quot;久未更，架构师不易做，太忙，now来一发&amp;quot; ##git stash如何只缓存某个文件或者挑几个文件缓存 使用 git stash push 在 git 2.13 之后，可以使用下面的命令 git stash push -m &amp;quot;comments&amp;quot; path/to/src/file 使用 git stash &amp;ndash;patch or git stash -p 如果使用比较老的git版本，没有太好的方法，就是使用git stash &amp;ndash</description>
+      <description>&amp;quot;久未更，架构师不易做，太忙，now来一发&amp;quot; git stash如何只缓存某个文件或者挑几个文件缓存 使用 git stash push 在 git 2.13 之后，可以使用下面的命令 git stash push -m &amp;quot;comments&amp;quot; path/to/src/file 使用 git stash &amp;ndash;patch or git stash -p 如果使用比较老的git版本，没有太好的方法，就是使用git stash &amp;ndash</description>
     </item>
     
     <item>
@@ -139,7 +139,7 @@
       <pubDate>Sat, 08 Jan 2022 09:13:37 +0800</pubDate>
       
       <guid>https://superryanguo.github.io/about/</guid>
-      <description>学历： SCUT Master Degree 专业： 人工智能与模式识别 在某大型跨国通信巨头公司任Scrum Master和Area Guardian，负责带团队和技术管理工作。 扫码关注</description>
+      <description>学历： SCUT Master Degree 专业： 人工智能与模式识别 在某大型跨国通信巨头公司任Software Architect，负责带团队和技术管理工作。 Mail: superryanguo@outlook.com 扫码关注</description>
     </item>
     
     <item>
