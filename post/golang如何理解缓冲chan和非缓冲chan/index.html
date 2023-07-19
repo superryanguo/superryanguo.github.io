@@ -233,7 +233,9 @@ var _hmt = _hmt || [];
 <pre tabindex="0"><code>c1 := make(chan int, 1)
 c2 := make(chan int)
 </code></pre><p>以此，也可以扩充到，缓冲channel和非缓冲channel的区别，咱们还是先看看golang的官方文档的经典解释：</p>
-<pre tabindex="0"><code>&quot;If the channel is unbuffered, the sender blocks until the receiver has received the value. If the channel has a buffer, the sender blocks only until the value has been copied to the buffer; if the buffer is full, this means waiting until some receiver has retrieved a value.&quot;
+<pre tabindex="0"><code>&quot;If the channel is unbuffered, the sender blocks until the receiver has received the value.
+If the channel has a buffer, the sender blocks only until the value has been copied to the buffer;
+if the buffer is full, this means waiting until some receiver has retrieved a value.&quot;
 </code></pre><p>似乎有点费解，咱们先看段程序之后再回过头来理解这句话，着急的可以直接跳到文章尾部看结论：-）</p>
 <p>示例代码:</p>
 <pre tabindex="0"><code>package main
