@@ -6,7 +6,16 @@
     <description>Recent content on superryanguo&#39;s home web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 08 Jul 2023 17:22:00 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jun 2025 21:36:17 +0800</lastBuildDate><atom:link href="https://superryanguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VibeCoding氛围编程的一天</title>
+      <link>https://superryanguo.github.io/post/vibecoding/</link>
+      <pubDate>Sun, 08 Jun 2025 21:36:17 +0800</pubDate>
+      
+      <guid>https://superryanguo.github.io/post/vibecoding/</guid>
+      <description>The Routine of Vibe Coding You write the prompt for 10 mins LLM generates the code for 5 mins You read, understand the code and make it compile pass for 2-3 days 氛围编程的一天 精神抖擞花了十分钟梭哈了一段提示词给大模型 大模型五分钟毫不犹豫的倾泻了好几个文件和几ksloc代码 费了半天功夫细细理清了代码的思路和不少时间集成代码到现有工程并编译通过 人是AI的工具</description>
+    </item>
+    
     <item>
       <title>Golang如何理解缓冲chan和非缓冲chan</title>
       <link>https://superryanguo.github.io/post/golang%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%BC%93%E5%86%B2chan%E5%92%8C%E9%9D%9E%E7%BC%93%E5%86%B2chan/</link>
